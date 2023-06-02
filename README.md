@@ -9,7 +9,7 @@ Docker files for getting wordpress going with sendmail working.
 4. Setup Nginx
   1. Search and replace `example.com` in `nginx.conf` with your domain.
   2. Move `nginx.conf` to `/etc/nginx/sites-available/<YOUR_DOMAIN_NAME>`.
-  3. move `nginx.conf` to `/etc/nginx/sites-available/<YOUR_DOMAIN_NAME>`.
+  3. Run `ln -s /etc/nginx/sites-available/<YOUR_DOMAIN_NAME> /etc/nginx/sites-enabled/<YOUR_DOMAIN_NAME>`.
   3. Run `service nginx restart`.
 5. (Optional) Setup systemd service.
   1. Replace `/var/www/wordpress` in `wordpress.service` with the path to this directory.
