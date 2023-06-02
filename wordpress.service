@@ -1,0 +1,13 @@
+# /etc/systemd/system/wordpress.service
+
+[Unit]
+Description=Wordpress service
+
+[Service]
+WorkingDirectory=/var/www/wordpress
+ExecStart=/usr/bin/docker compose up
+ExecStop=/usr/bin/docker compose down
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target
